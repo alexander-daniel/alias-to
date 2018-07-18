@@ -1,0 +1,24 @@
+{
+  "name": "alias-to",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "keyvalue-xyz": "^1.0.2",
+    "micro": "^9.1.4",
+    "micro-dev": "^2.2.2",
+    "micro-redirect": "^1.0.0",
+    "microrouter": "^3.1.1"
+  },
+  "scripts": {
+    "start": "micro",
+    "start-dev": "DOMAIN_NAME=localhost:3000 micro-dev",
+    "deploy": "now && now alias && now remove alias-to --safe -y"
+  },
+  "now": {
+    "alias": ["alias-to.now.sh"],
+    "env": {
+      "DOMAIN_NAME": "alias-to.now.sh"
+    }
+  }
+}
