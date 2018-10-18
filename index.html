@@ -43,7 +43,7 @@
         var inputElement = document.getElementById('url');
         var value = inputElement.value;
 
-        fetch(`/create?url=${value}`).then(res => {
+        fetch(`/shorten?url=${value}`).then(res => {
           return res.json();
         }).then((json) => {
           const url = json.url;
